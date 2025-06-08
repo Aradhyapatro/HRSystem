@@ -1,11 +1,11 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import '../Styles/LoginPage.css';
 import AppContext from '../Context/AppContext';
 import Api from "../Api/api"
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  const { username, password, setPassword, setUsername, setJwt, setRole, jwt } = useContext(AppContext)
+  const { username, password, setPassword, setUsername, setJwt, setRole } = useContext(AppContext)
   const navigate = useNavigate()
 
   const handleLogin = async () => {

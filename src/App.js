@@ -2,7 +2,7 @@ import './App.css';
 import LoginPage from "./Components/LoginPage"
 import AdminScreen from "./Components/AdminScreen"
 import OperationScreen from "./Components/OperationScreen"
-import { Route, BrowserRouter as Router, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import HomePage from './Components/HomePage';
 import DepartmentScreen from './Components/DepartmentScreen';
 import AppContext from './Context/AppContext';
@@ -10,7 +10,7 @@ import { useContext, useEffect } from 'react';
 import Api from './Api/api';
 
 function App() {
-  const { role, setJwt, jwt, setRole } = useContext(AppContext)
+  const { role, setJwt, setRole } = useContext(AppContext)
   const navigate = useNavigate()
 
   const validate = async (token) => {
@@ -40,6 +40,7 @@ function App() {
     setRole(res.data)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const caching = async () => {
 
@@ -48,7 +49,7 @@ function App() {
         setJwt(token);
         const data = await validate(token);
 
-        if (data == false) {
+        if (data === false) {
           await setRoleFunc(token)
           navigate('/')
         }

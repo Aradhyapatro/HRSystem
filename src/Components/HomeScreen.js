@@ -2,14 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import '../Styles/HomeScreen.css';
 import Api from '../Api/api';
 import AppContext from '../Context/AppContext';
-import { Link, useNavigate } from 'react-router-dom';
 import Nav from './Nav';
 
 const HomeScreen = () => {
     const [soeid, setSoeid] = useState('');
     const [employee, setEmployee] = useState(null);
-    const { jwt, setJwt } = useContext(AppContext);
-    const navigate = useNavigate()
+    const { jwt } = useContext(AppContext);
 
     useEffect(() => {
         const fetchSoeidAndDetails = async () => {
@@ -22,6 +20,8 @@ const HomeScreen = () => {
 
                 const id = response.data;
                 setSoeid(id);
+                console.log(soeid);
+
 
                 const empResponse = await Api.get(`/emp/${id}`, {
                     headers: {
@@ -39,11 +39,6 @@ const HomeScreen = () => {
             fetchSoeidAndDetails();
         }
     }, [jwt]);
-
-    const handleLogout = () => {
-        setJwt(null)
-        navigate("/Login")
-    }
 
     return (
         <div className="home-container">

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../Styles/OperationScreen.css';
-import { Link } from 'react-router-dom';
 import Api from '../Api/api';
 import AppContext from '../Context/AppContext';
 import Nav from './Nav';
