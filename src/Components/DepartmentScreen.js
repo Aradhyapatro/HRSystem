@@ -218,24 +218,7 @@ const DepartmentScreen = () => {
                         />
                     </Paper>
 
-                    <table className="employee-table">
-                        <thead>
-                            <tr>
-                                <th>Department ID</th>
-                                <th>Name</th>
-                                <th>Head SOEID</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {departmentList.map((dept, index) => (
-                                <tr key={index}>
-                                    <td>{dept.departmentId}</td>
-                                    <td>{dept.dname}</td>
-                                    <td>{dept.soeid || '-'}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+
                 </div>
             )}
         </div>

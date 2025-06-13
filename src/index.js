@@ -5,14 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import AppProvider from './Context/AppProvider';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from './Context/ThemeContext';
+import "./Styles/Theme.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AppProvider>
-      <Router>
-        <App />
-      </Router>
+      <ThemeProvider>
+        <Router>
+          <App />
+        </Router>
+      </ThemeProvider>
     </AppProvider>
   </React.StrictMode>
 );

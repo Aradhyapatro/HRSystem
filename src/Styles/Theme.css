@@ -1,0 +1,44 @@
+body.light-theme {
+  background-color: #f5f7fa;
+  color: #111;
+}
+
+body.vibrant-theme {
+  background-color: #f3f0ff;
+  color: #2e1a47;
+}
+
+/* Navbar */
+.vibrant-theme .navbar {
+  background-color: #6f42c1; /* Purple */
+}
+
+/* Nav Buttons */
+.vibrant-theme .nav-button {
+  background-color: #563d7c; /* Deep Purple */
+  color: white;
+}
+
+.vibrant-theme .nav-button:hover {
+  background-color: #452c6a;
+}
+
+/* Logout Button */
+.vibrant-theme .logout {
+  background-color: #ff6b6b;
+}
+
+.vibrant-theme .logout:hover {
+  background-color: #e63946;
+}
+
+/* Employee Table */
+.vibrant-theme .employee-table th {
+  background-color: #c8bfff;
+  color: #1e1e1e;
+}
+
+.vibrant-theme .employee-table td {
+  background-color: #eee6ff;
+  color: #1e1e1e;
+}
