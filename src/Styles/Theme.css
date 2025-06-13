@@ -10,26 +10,52 @@ body.vibrant-theme {
 
 /* Navbar */
 .vibrant-theme .navbar {
-  background-color: #6f42c1; /* Purple */
+  background-color: #6f42c1; /* Vibrant Purple */
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(111, 66, 193, 0.2);
+  padding: 16px 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
 }
 
 /* Nav Buttons */
 .vibrant-theme .nav-button {
-  background-color: #563d7c; /* Deep Purple */
+  background-color: #563d7c;
   color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(86, 61, 124, 0.25);
 }
 
 .vibrant-theme .nav-button:hover {
   background-color: #452c6a;
+  transform: translateY(-1px);
 }
 
 /* Logout Button */
 .vibrant-theme .logout {
   background-color: #ff6b6b;
+  margin-left: auto;
 }
 
 .vibrant-theme .logout:hover {
   background-color: #e63946;
+}
+
+/* Theme Toggle Button */
+.vibrant-theme .toggle-theme {
+  background-color: #ffb703;
+  color: #222;
+}
+
+.vibrant-theme .toggle-theme:hover {
+  background-color: #f4a261;
 }
 
 /* Employee Table */
@@ -41,4 +67,17 @@ body.vibrant-theme {
 .vibrant-theme .employee-table td {
   background-color: #eee6ff;
   color: #1e1e1e;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .vibrant-theme .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vibrant-theme .nav-button {
+    width: 100%;
+    text-align: center;
+  }
 }

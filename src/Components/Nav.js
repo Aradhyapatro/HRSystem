@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AppContext from '../Context/AppContext';
 import ThemeContext from '../Context/ThemeContext';
+import "../Styles/Nav.css"
 
 const Nav = () => {
     const { setJwt, role } = useContext(AppContext);
