@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const Api = axios.create({
-    baseURL: 'http://localhost:8000/api/',
+    baseURL: 'https://hrsystemapitest.azurewebsites.net/api/',
     headers: {
         'Content-Type': 'application/json',
     },
